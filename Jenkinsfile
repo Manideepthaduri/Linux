@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Push Docker Image') {
             steps{
-                withCredentials([usernamePassword(credentialsId: 'DockerHub_username_password', passwordVariable: 'DOCKERHUB_PASSWD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: 'DockerHub_username_password', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                  sh '''
                  docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
                  docker push mmreddy424/web-application:$BUILD_NUMBER
