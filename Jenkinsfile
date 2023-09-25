@@ -6,7 +6,7 @@ pipeline {
     stages {
       stage('Clone the repository'){
         steps{
-          git branch: git 'https://github.com/Manideepthaduri/Linux.git'
+          git branch: git 'git credentialsId: '3bfe693a-892e-45f4-9270-aa8dd3a331c4', url: 'https://github.com/Manideepthaduri/Linux.git'
           
         } 
       }
