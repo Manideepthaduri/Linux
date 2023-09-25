@@ -32,7 +32,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'DockerHub_username_password', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                  sh '''
                  docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
-                 docker push mmreddy424/web-application:$BUILD_NUMBER
+                 docker push manideep9/wev-application:$BUILD_NUMBER
                     
                    ''' 
 }
