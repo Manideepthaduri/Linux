@@ -6,7 +6,7 @@ pipeline {
     stages {
       stage('Clone the repository'){
         steps{
-          git branch: git 'https://github.com/Manideepthaduri/Linux.git'
+         git clone 'https://github.com/Manideepthaduri/Linux.git'
           
         } 
       }
